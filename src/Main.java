@@ -2,14 +2,46 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        // task 1
+        System.out.println("Task 1");
+        int[] arrayPayMonth = {100_000, 35_000, 70_000, 175_000, 30_000};
+        int SumMonth = 0;
+        for (int i = 0; i < arrayPayMonth.length; i++) {
+            SumMonth += arrayPayMonth[i];
+        }
+        System.out.println("Сумма трат за месяц составила " + SumMonth + " рублей.");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        // task 2
+        System.out.println("Task 2");
+        int[] arrayPayWeek = {25_000, 17_000, 84_000, 10_000, 3_000};
+        int minWeek = arrayPayWeek[0];
+        int maxWeek = arrayPayWeek[0];
+        for (int i = 0; i < arrayPayWeek.length; i++) {
+            if (arrayPayWeek[i] > maxWeek){
+                maxWeek = arrayPayWeek[i];
+            }
+            if (arrayPayWeek[i] < minWeek){
+                minWeek = arrayPayWeek[i];
+            }
+        }
+        System.out.println("Минимальная сумма трат за неделю составила " + minWeek + " рублей. Максимальная сумма трат за неделю составила " + maxWeek + " рублей.");
+
+        // task 3
+        System.out.println("Task 3");
+        int[] arrayPayMonthMedium = {200_000, 35_000, 48_000, 76_000, 84_000};
+        double payMonthMedium = 0;
+        int payMonth = 0;
+        for (int i = 0; i < arrayPayMonthMedium.length; i++) {
+            payMonth += arrayPayMonthMedium[i];
+            payMonthMedium = payMonth / arrayPayMonthMedium.length;
+        }
+        System.out.println("Средняя сумма трат за месяц составила " + payMonthMedium + " рублей.");
+
+        // task 4
+        System.out.println("Task 4");
+        char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        for (int i = reverseFullName.length - 1; i >= 0; i--) {
+            System.out.print(reverseFullName[i]);
         }
     }
 }
